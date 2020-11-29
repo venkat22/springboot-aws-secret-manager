@@ -32,7 +32,7 @@ public class OAuth2ResourceServerSecurityConfiguration extends WebSecurityConfig
                 .authorizeRequests(authorize -> authorize
                         .mvcMatchers(HttpMethod.GET, "/api/test/v1/**").hasAuthority("ROLE_student")
                         .mvcMatchers(HttpMethod.POST, "/api/test/v1/**").hasAuthority("ROLE_admin")
-                        .anyRequest().authenticated()
+                        .anyRequest().anonymous()
                 )
                 .oauth2ResourceServer(oauth2ResourceServer ->
                         oauth2ResourceServer
