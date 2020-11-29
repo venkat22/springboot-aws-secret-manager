@@ -1,9 +1,11 @@
 package com.sma.aws.properties.controller;
 
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
+import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;
@@ -14,7 +16,10 @@ import java.util.Map;
  * @date : 1/3/2020
  **/
 @RestController
+@EnableSwagger2
+
 @RequestMapping(value = "/api/test")
+
 public class TestController {
 
     @Value(value = "${application.id}")

@@ -1,8 +1,27 @@
 aws:
     secretsmanager:
         name: backend
-        prefix: /secret
+        prefix: GHNS
+        default-context: backend
+
+
 cloud:
     aws:
         region:
-            static: ap-southeast-1
+            static: us-east-1
+
+
+spring:
+    security:
+        oauth2:
+            resourceserver:
+                jwt:
+                    jwk-set-uri: https://sso-dev.johndeere.com/oauth2/ausp2t6ez0mwzJRQ80h7/v1/keys
+
+logging:
+    level:
+        org:
+            springframework:
+                security: DEBUG
+
+
