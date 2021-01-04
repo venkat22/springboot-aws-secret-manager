@@ -15,7 +15,7 @@ spring:
     security:
         oauth2:
             resourceserver:
-                jwt:
+                 jwt:
                     jwk-set-uri: https://sso-dev.johndeere.com/oauth2/ausp2t6ez0mwzJRQ80h7/v1/keys
 
 logging:

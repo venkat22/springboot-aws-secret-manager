@@ -85,9 +85,9 @@ public class SpringFoxConfig {
     }
 
     private ApiInfo apiInfo() {
-        return new ApiInfoBuilder().title("My API title").description("")
+        return new ApiInfoBuilder().title("My API title").description("Demo for the team.")
                 .termsOfServiceUrl("https://www.example.com/api")
-                .contact(new Contact("Hasson", "http://www.example.com", "hasson@example.com"))
+                .contact(new Contact("Venkat", "http://www.example.com", "venkat@example.com"))
                 .license("Open Source").licenseUrl("https://www.example.com").version("1.0.0").build();
     }
 }
